@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Target Range Villa - Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="book.html">Book Now</a>
+  </div>
+
+  <div class="container">
+    <h1 class="villa-title">🌴 Newly Renovated Luxury Villa</h1>
+
+    <!-- <img class="villa-img" src="villa.JPG" alt="Villa Image" /> -->
+
+    <p>
+      Welcome to your dream escape! This newly renovated villa offers the perfect blend of comfort and luxury.
+      With 4 spacious bedrooms, a private pool, lush garden, and a sea view, it's the perfect place to relax and unwind.
+    </p>
+
+    <!-- ─── Slider Starts Here ─────────────────────────────────────────────────── -->
+    <div class="slider">
+      <div class="slides-wrapper" id="sliderWrapper">
+        <img src="images/villa1.jpg" alt="Villa Image 1" class="slide-img">
+        <img src="images/villa2.png" alt="Villa Image 2" class="slide-img">
+        <img src="images/villa3.png" alt="Villa Image 3" class="slide-img">
+        <img src="images/villa4.jpg" alt="Villa Image 4" class="slide-img">
+        <!-- Add more <img> lines if you have more images -->
+      </div>
+      <button class="slider-btn prev" onclick="moveSlide(-1)">❮</button>
+      <button class="slider-btn next" onclick="moveSlide(1)">❯</button>
+    </div>
+    <!-- ─── Slider Ends Here ───────────────────────────────────────────────────── -->
+
+    <h3 class="price">💰 Price: $250 per night</h3>
+    <p><strong>Location:</strong> Trincomalee, Sri Lanka</p>
+
+    <ul>
+      <li>🏖 2 minutes walk to the beach</li>
+      <li>🛏 4 Bedrooms with A/C</li>
+      <li>🍳 Fully Equipped Kitchen</li>
+      <li>📶 Free Wi-Fi</li>
+      <li>🅿️ Parking Available</li>
+    </ul>
+
+    <a href="mailto:booking@example.com" class="button">Book Now</a>
+  </div>
+
+
+  <a href="https://wa.me/94773275408?text=Hi%20I'm%20interested%20in%20booking%20the%20villa!" 
+     class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" 
+         alt="WhatsApp" style="width:50px;height:50px;">
+  </a>
+<h2>📍 Find Us Here</h2>
+  <div class="map-container">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d990.0288349241553!2d81.0553142695632!3d6.995695330683795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNsKwNTknNDQuNSJOIDgxwrAwMycyMS41IkU!5e0!3m2!1sen!2slk!4v1748700312814!5m2!1sen!2slk"
+      width="100%" 
+      height="300" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy">
+    </iframe>
+  </div>
+
+  <!-- ─── JavaScript for Slider ───────────────────────────────────────────────── -->
+  <script>
+    // Wait until the DOM is loaded
+    document.addEventListener("DOMContentLoaded", function() {
+      let currentIndex = 0;
+      const slides = document.querySelectorAll('.slide-img');
+      const totalSlides = slides.length;
+      const sliderWrapper = document.getElementById('sliderWrapper');
+
+      // Move slider by direction: +1 for next, -1 for prev
+      window.moveSlide = function(direction) {
+        currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+        sliderWrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+      };
+    });
+  </script>
+
+  <footer class="bg-dark text-white text-center text-md-start mt-5 pt-4 pb-4">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-6 mb-3">
+          <h5>Contact Us</h5>
+          <p>
+            📍 123 Ocean View Road, Pasikuda, Sri Lanka<br>
+            📞 +94 77 123 4567<br>
+            📧 villa@example.com
+          </p>
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <h5>Follow Us</h5>
+          <p>
+            <a href="https://wa.me/94771234567" class="text-white" target="_blank">WhatsApp</a> |
+            <a href="#" class="text-white">Facebook</a> |
+            <a href="#" class="text-white">Instagram</a>
+          </p>
+        </div>
+
+      </div>
+      <hr class="bg-white">
+      <div class="text-center">
+        © 2025 Newly Renovated Luxury Villa. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
