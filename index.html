@@ -6,36 +6,46 @@
   <title>Target Range Villa - Home</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <div class="navbar">
-    <a href="index.html">Home</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="book.html">Book Now</a>
-  </div>
+  <nav class="navbar">
+    <div class="nav-left">
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+    </div>
+    <div class="nav-title">─────────────   TARGET RANGE VILLA   ─────────────</div>
+    <div class="nav-right">
+      <a href="book.html">Book Now</a>
+      <a href="our-story.html">Our Story</a>
+    </div>
+  </nav>
 
   <div class="container">
-    <h1 class="villa-title">🌴 Newly Renovated Luxury Villa</h1>
+    <h1 class="villa-title">Newly Renovated Luxury Villa 🌴 </h1>
+  </div>
+    <!-- ─── Slider Starts Here ─────────────────────────────────────────────────── -->
+  <div class="slider">
+    <div class="slides-wrapper" id="sliderWrapper">
+      <img src="images/villa4.JPG" alt="Villa Image 1" class="slide-img">
+      <img src="images/villa2.PNG" alt="Villa Image 2" class="slide-img">
+      <img src="images/villa3.PNG" alt="Villa Image 3" class="slide-img">
+      <img src="images/villa5.PNG" alt="Villa Image 5" class="slide-img">
+      <img src="images/villa6.JPG" alt="Villa Image 6" class="slide-img">
+      <img src="images/villa7.JPG" alt="Villa Image 7" class="slide-img">
+      <!-- Add more <img> lines if you have more images -->
+    </div>
+    <button class="slider-btn prev" onclick="moveSlide(-1)">❮</button>
+    <button class="slider-btn next" onclick="moveSlide(1)">❯</button>
+  </div>
+  <!-- ─── Slider Ends Here ───────────────────────────────────────────────────── -->
 
-    <!-- <img class="villa-img" src="villa.JPG" alt="Villa Image" /> -->
-
+  <div class="container">
     <p>
       Welcome to your dream escape! This newly renovated villa offers the perfect blend of comfort and luxury.
       With 4 spacious bedrooms, a private pool, lush garden, and a sea view, it's the perfect place to relax and unwind.
     </p>
 
-    <!-- ─── Slider Starts Here ─────────────────────────────────────────────────── -->
-    <div class="slider">
-      <div class="slides-wrapper" id="sliderWrapper">
-        <img src="images/villa1.JPG" alt="Villa Image 1" class="slide-img">
-        <img src="images/villa2.PNG" alt="Villa Image 2" class="slide-img">
-        <img src="images/villa3.PNG" alt="Villa Image 3" class="slide-img">
-        <img src="images/villa4.JPG" alt="Villa Image 4" class="slide-img">
-        <!-- Add more <img> lines if you have more images -->
-      </div>
-      <button class="slider-btn prev" onclick="moveSlide(-1)">❮</button>
-      <button class="slider-btn next" onclick="moveSlide(1)">❯</button>
-    </div>
-    <!-- ─── Slider Ends Here ───────────────────────────────────────────────────── -->
+
 
     <h3 class="price">💰 Price: $250 per night</h3>
     <p><strong>Location:</strong> Trincomalee, Sri Lanka</p>

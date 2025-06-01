@@ -16,26 +16,52 @@ body {
 }
 
 .navbar {
-  background-color: #061c0f;
-  padding: 15px;
+  display: flex;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  height: 80px;
+}
+
+.nav-left,
+.nav-right {
+  font-family: "Gill Sans", sans-serif;
+  display: flex;
+  gap: 15px;
+  color: white;
+}
+
+.nav-title {
+  font-family: serif;
+  font-size: 30px;
+  font-weight: lighter;
+  white-space: nowrap;
+  color: white;
   text-align: center;
+  flex: 1;
+  margin: 0 20px;
+  pointer-events: none; /* Prevents accidental clicks */
 }
 
 .navbar a {
   color: #fff;
   text-decoration: none;
-  margin: 0 20px;
   font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background 0.2s;
 }
 
 .navbar a:hover {
+  background: #444;
   text-decoration: underline;
 }
 
 /* ─── Container ───────────────────────────────────────────────────────────── */
 .container {
   max-width: 900px;
-  margin: 40px auto;
+  margin: 10px auto;
   background: #fff;
   padding: 30px;
   border-radius: 10px;
@@ -50,10 +76,10 @@ body {
 /* ─── Slider ───────────────────────────────────────────────────────────────── */
 .slider {
   position: relative;
-  width: 80%;
-  height: 500px;
-  max-width: 800px;
-  margin: 30px auto;
+  width: 90vw;
+  height: 70vh;
+  max-width: 1000px;
+  margin: 10px auto;
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 5px 20px rgba(0,0,0,0.2);
@@ -61,15 +87,26 @@ body {
 
 .slides-wrapper {
   display: flex;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 1s ease-in-out;
+  width: 650vw; /* 3 images × 100vw */
+  height: 80%;
+  animation: slide 24s infinite;
   /* width will be automatically (100% × # of slides) since each .slide-img is flex: 0 0 100% */
 }
 
 .slide-img {
-  flex: 0 0 100%;
-  width: 100%;
-  height: 500px;
-  display: block;
+  width: 100vw;
+  height: 80vh;
+  object-fit: cover;
+}
+
+@keyframes slide {
+  0%   { transform: translateX(0); }
+  20%  { transform: translateX(-100vw); }
+  40%  { transform: translateX(-200vw); }
+  60% { transform: translateX(-300vw); }
+  80% { transform: translateX(-400vw); }
+  100% { transform: translateX(0); }
 }
 
 /* Prev/Next buttons */
