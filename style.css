@@ -58,6 +58,30 @@ body {
   text-decoration: underline;
 }
 
+/* ...existing code... */
+
+/* Responsive Navbar */
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 5px;
+    align-items: stretch;
+  }
+  .nav-left,
+  .nav-right {
+    justify-content: center;
+    flex: none;
+    margin: 5px 0;
+  }
+  .nav-title {
+    font-size: 1.2rem;
+    margin: 8px 0;
+    text-align: center;
+    white-space: normal;
+  }
+}
+
 /* ─── Container ───────────────────────────────────────────────────────────── */
 .container {
   max-width: 900px;
