@@ -5,21 +5,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Villa Gallery</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700&display=swap" rel="stylesheet">  
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quattrocento&display=swap" rel="stylesheet">
 </head>
 <body>
+   <!-- ─── Slider Starts Here ─────────────────────────────────────────────────── -->
+  <div class="slider">
+    <div class="slider-header">
+      <div class="nav-left">
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+      </div>
+      <div class="nav-title">
+        <img src="images/logo.png" alt="Target Range Villa Logo" class="villa-logo" />
+      </div>
+      <div class="nav-right">
+        <a href="book.html">Book Now</a>
+        <a href="explore.html">Explore</a>
+      </div>
+    </div>
 
-  <!-- ─── Navbar ──────────────────────────────────────────────────────────────── -->
-  <nav class="navbar">
-    <div class="nav-left">
-      <a href="index.html">Home</a>
-      <a href="gallery.html">Gallery</a>
+    <div class="fade-slideshow">
+      <div class="fade-slider-header-overlay"></div>
+      <div class="fade-slideshow-overlay"></div>
+      <div class="fade-slideshow-text-heading">Your Perfect Stay Within Range</div>
+      <div class="fade-slideshow-text">
+        At Target Range Villa, we create truly everlasting memories. Traverse the breathtaking island with us and be mesmerized by all that is to be encountered and indulged in.
+      </div>
+      <img src="images/backup/villa1.PNG" alt="Villa Image 1" class="fade-slide-img">
+      <img src="images/backup/villa2.PNG" alt="Villa Image 2" class="fade-slide-img">
+      <img src="images/backup/villa3.PNG" alt="Villa Image 3" class="fade-slide-img">
+      <img src="images/backup/villa4.PNG" alt="Villa Image 4" class="fade-slide-img">
+      <img src="images/backup/villa5.PNG" alt="Villa Image 5" class="fade-slide-img">
+      <img src="images/backup/villa6.PNG" alt="Villa Image 6" class="fade-slide-img">
+       <img src="images/backup/villa7.PNG" alt="Villa Image 7" class="fade-slide-img">
+      <img src="images/backup/villa8.PNG" alt="Villa Image 8" class="fade-slide-img">
+      <img src="images/backup/villa9.PNG" alt="Villa Image 9" class="fade-slide-img">
+   
     </div>
-    <div class="nav-title">─────   TARGET RANGE VILLA   ─────</div>
-    <div class="nav-right">
-      <a href="book.html">Book Now</a>
-      <a href="explore.html">Explore</a>
-    </div>
-  </nav>
+  </div>
+  <!-- ─── Slider Ends Here ───────────────────────────────────────────────────── -->
+<!-- At Target Range Villa, we are that become truly everlasting memories. Traverse the breathtaking island with us and be mesmerized by all that is to be encountered and indulged in. -->
+
+
 
   <div class="container">
     <h1>🏝 Villa Photo Gallery</h1>
@@ -64,5 +96,26 @@
       </div>
     </div>
   </footer>
+
+
+  <script>
+  let fadeImages = document.querySelectorAll('.fade-slide-img');
+  let fadeIndex = 0;
+
+  function showFadeSlide(idx) {
+    fadeImages.forEach((img, i) => {
+      img.classList.toggle('active', i === idx);
+    });
+  }
+
+  function nextFadeSlide() {
+    fadeIndex = (fadeIndex + 1) % fadeImages.length;
+    showFadeSlide(fadeIndex);
+  }
+
+  // Initialize
+  showFadeSlide(fadeIndex);
+  setInterval(nextFadeSlide, 3500); // Change image every 3.5 seconds
+  </script>
 </body>
 </html>
