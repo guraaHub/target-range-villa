@@ -50,7 +50,7 @@ body {
 }
 
 .villa-logo {
-  height: 100px;        /* Adjust height as needed */
+  height: 120px;        /* Adjust height as needed */
   width: auto;         /* Keeps aspect ratio */
   display: block;      /* Removes extra space below image */
   margin: 20px auto 0 auto;      /* Center horizontally if needed */
