@@ -4,13 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Villa Gallery</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="gallery-style.css">
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700&display=swap" rel="stylesheet">  
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Quattrocento&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
 </head>
 <body>
   <div id="loader-overlay">
@@ -38,7 +39,7 @@
       <div class="fade-slideshow-overlay"></div>
       <div class="fade-slideshow-text-heading">Your Perfect Stay Within Range</div>
       <div class="fade-slideshow-text">
-        At Target Range Villa, we create truly everlasting memories. Traverse the breathtaking island with us and be mesmerized by all that is to be encountered and indulged in.
+          Our accommodations blend elegance with refined comfort and style, allowing you to fully immerse yourself in the calm and peaceful surrounding.
       </div>
       <img src="images/backup/villa1.png" alt="Villa Image 1" class="fade-slide-img">
       <img src="images/backup/villa2.png" alt="Villa Image 2" class="fade-slide-img">
@@ -54,7 +55,6 @@
   </div>
   <!-- ─── Slider Ends Here ───────────────────────────────────────────────────── -->
 <!-- At Target Range Villa, we are that become truly everlasting memories. Traverse the breathtaking island with us and be mesmerized by all that is to be encountered and indulged in. -->
-
   <div class="title-header">
     <h1>Photo Gallery</h1>
     <p>Browse photos of our villa and the memorable experiences you can enjoy during your stay</p>
@@ -76,60 +76,58 @@
     </div>
   </div>
 
-  <footer class="bg-dark text-white text-center text-md-start mt-5 pt-4 pb-4">
+  <footer class="villa-footer">
     <div class="container">
-      <div class="row">
-
-        <div class="col-md-6 mb-3">
+      <div class="footer-content">
+        <div class="footer-section contact">
           <h5>Contact Us</h5>
-          <p>
-            📍 36/3A, Bandaranayake Mawatha, Badulla, Sri Lanka<br>
-            📞 +94 77 327 6128<br>
-            📧 targetrangevilla@gmail.com
-          </p>
+          <p>📍 36/3A, Bandaranayake Mawatha, Badulla, Sri Lanka</p>
+          <p>📞 <a href="tel:+94773276128">+94 77 327 6128</a></p>
+          <p>📧 <a href="mailto:targetrangevilla@gmail.com">targetrangevilla@gmail.com</a></p>
         </div>
-
-        <div class="col-md-6 mb-3">
+        <div class="footer-section social">
           <h5>Follow Us</h5>
-          <p>
-            <a href="https://wa.me/94773276128" class="text-white" target="_blank">WhatsApp</a> |
-            <a href="#" class="text-white">Facebook</a> |
-            <a href="#" class="text-white">Instagram</a>
-          </p>
+          <div class="social-links">
+            <a href="https://wa.me/94773276128" target="_blank">🟢 WhatsApp</a>
+            <a href="#" target="_blank">📘 Facebook</a>
+            <a href="#" target="_blank">📷 Instagram</a>
+          </div>
         </div>
-
       </div>
-      <hr class="bg-white">
-      <div class="text-center">
-        © 2025 Newly Renovated Luxury Villa. All rights reserved.
+      <hr>
+      <div class="footer-bottom">
+        © 2025 Target Range Villa. All rights reserved.
       </div>
     </div>
   </footer>
 
-
   <script>
-  let fadeImages = document.querySelectorAll('.fade-slide-img');
-  let fadeIndex = 0;
+    let fadeImages = document.querySelectorAll('.fade-slide-img');
+    let fadeIndex = 0;
 
-  function showFadeSlide(idx) {
-    fadeImages.forEach((img, i) => {
-      img.classList.toggle('active', i === idx);
-    });
-  }
+    function showFadeSlide(idx) {
+      fadeImages.forEach((img, i) => {
+        img.classList.toggle('active', i === idx);
+      });
+    }
 
-  function nextFadeSlide() {
-    fadeIndex = (fadeIndex + 1) % fadeImages.length;
+    function nextFadeSlide() {
+      fadeIndex = (fadeIndex + 1) % fadeImages.length;
+      showFadeSlide(fadeIndex);
+    }
+
+    // Initialize
     showFadeSlide(fadeIndex);
-  }
+    setInterval(nextFadeSlide, 3500); // Change image every 3.5 seconds
+  </script>
 
-  // Initialize
-  showFadeSlide(fadeIndex);
-  setInterval(nextFadeSlide, 3500); // Change image every 3.5 seconds
-  </script>
+
   <script>
-  window.addEventListener('load', function() {
+    window.addEventListener('load', function() {
     document.getElementById('loader-overlay').style.display = 'none';
-  });
+    });
   </script>
+
+
 </body>
 </html>

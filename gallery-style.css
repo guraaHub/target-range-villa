@@ -8,7 +8,7 @@
 }
 
 /* ─── Body & Navbar ────────────────────────────────────────────────────────── */
-body {
+.body {
   font-family: Arial, sans-serif;
   background: #f2f2f2;
   color: #333;
@@ -25,12 +25,13 @@ body {
 }
 
 .title-header {
-  background: #333 url('images/gallery-bg-pattern4.jpeg') repeat;
+  background: #333 url('images/gallery-bg-pattern2.jpeg') repeat;
   color: #fff;
   padding: 30px 20px;
   text-align: center;
   box-shadow: 0 6px 24px rgba(0,0,0,0.12);
   background-size: 120px 120px;
+  font-family: 'Poppins', sans-serif;
 }
 
 .title-header::after {
@@ -44,13 +45,8 @@ body {
 }
 
 .title-header h1 {
-  /* font-family: 'Cormorant Garamond', serif; */
-  /* font-family: 'Cinzel', serif; */
-  font-family: 'Poppins', sans-serif;
-  /* font-family: 'Quattrocento', serif; */
   letter-spacing: 2px;
   font-size: 2.5rem;
-  /* color: #b48527; */
   color: white;
   margin-bottom: 3px;
 }
@@ -152,7 +148,7 @@ body {
 .container {
   max-width: 900px;
   margin: 5px auto;
-  background: #fff;
+  background: #ffffff;
   padding: 10px;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -427,21 +423,6 @@ body {
   height: 150px;
 }
 
-/* ─── Whatsapp Icon ───────────────────────────────────────────────── */
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 1000;
-}
-
-/* ─── Map ───────────────────────────────────────────────── */
-.map-container {
-  margin: 30px 0;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
-}
 
 /* Optional: Style the button for better appearance */
 .button {
@@ -585,7 +566,7 @@ body {
   font-family: 'Quattrocento', serif;
 }
 
-#loader-overlay {
+.loader-overlay {
   position: fixed;
   top: 0; left: 0;
   width: 100vw; height: 100vh;
@@ -676,7 +657,7 @@ body {
 
 .villa-footer {
   /* background-color: #373638; */
-  background: #333 url('images/gallery-bg-pattern5.jpeg') repeat;
+  background: #333 url('images/gallery-bg-pattern3.jpeg') repeat;
   color: #333232;
   padding: 40px 0 20px;
   font-family: 'Segoe UI', sans-serif;
